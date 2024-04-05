@@ -5,13 +5,18 @@ import ReactDOM from "react-dom";
 
 //const element = React.createElement('hi', null, 'Hello React World');
 const TodoList = () => {
+  let items = [
+    "Install React",
+    "Study React",
+    "Use React",
+    "Build React AppReact",
+    "But Python Is Better ¯_(ツ)_/¯",
+  ];
   return (
     <ul>
-      <li>Install React</li>
-      <li>Study React</li>
-      <li>Use React</li>
-      <li>Build React App</li>
-      <li>But Python Is Better ¯\_(ツ)_/¯</li>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
     </ul>
   );
 };
@@ -21,12 +26,20 @@ const AppHeader = () => {
 };
 
 const SearchPanel = () => {
-  return <input placeholder="search" />;
+  const searchText = "Type here to search";
+  const searchStyle = {
+    fontSize: "20px",
+  };
+
+  return <input style={searchStyle} placeholder={searchText} disabled={true} />;
 };
 
 const App = () => {
+  const value = '<script>alert ("")</script>';
+
   return (
     <div>
+      {value}
       <AppHeader />
       <SearchPanel />
       <TodoList />
