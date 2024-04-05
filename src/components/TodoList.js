@@ -5,10 +5,7 @@ import TodoListItem from "./TodoListItem";
 const TodoList = ({ todos }) => {
   const elements = todos.map((item) => (
     <li>
-      <TodoListItem 
-        label={item.label} 
-        important={item.important}
-      />
+      <TodoListItem {...item} />
     </li>
   ));
   return <ul>{elements}</ul>;
