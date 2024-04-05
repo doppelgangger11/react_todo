@@ -1,38 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-// console.log("testing react app");
-
-//const element = React.createElement('hi', null, 'Hello React World');
-const TodoList = () => {
-  let items = [
-    "Install React",
-    "Study React",
-    "Use React",
-    "Build React AppReact",
-    "But Python Is Better ¯_(ツ)_/¯",
-  ];
-  return (
-    <ul>
-      {items.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-    </ul>
-  );
-};
-
-const AppHeader = () => {
-  return <h1>My Todo List</h1>;
-};
-
-const SearchPanel = () => {
-  const searchText = "Type here to search";
-  const searchStyle = {
-    fontSize: "20px",
-  };
-
-  return <input style={searchStyle} placeholder={searchText} disabled={true} />;
-};
+import AppHeader from "./components/AppHeader";
+import SearchPanel from "./components/SearchPanel";
+import TodoList from "./components/TodoList";
 
 const App = () => {
   const value = '<script>alert ("")</script>';
