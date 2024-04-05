@@ -2,12 +2,9 @@ import React, { Component } from "react";
 import "./TodoListItem.css";
 
 export default class TodoListItem extends Component {
-  constructor() {
-    super();
-    this.onLabelClick = () => {
-      console.log(`Done: ${this.props.label}`);
-    };
-  }
+  onLabelClick = () => {
+    console.log(`Done: ${this.props.label}`);
+  };
 
   render() {
     const { label, important = false } = this.props;
@@ -24,7 +21,6 @@ export default class TodoListItem extends Component {
         >
           {label}
         </span>
-
         <button
           type="button"
           className="btn btn-outline-success btn-sm float-right"
