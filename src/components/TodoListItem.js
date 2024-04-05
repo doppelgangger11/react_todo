@@ -1,13 +1,15 @@
 import React from "react";
+import "./TodoListItem.css"
 
 const TodoListItem = ({ label, important = false }) => {
-
   const style = {
-      color: important ? 'tomato' : 'black'
+    color: important ? "tomato" : "black",
   };
-  return <span style={ style }>{ label }</span>
-  //props argument in TodoListItem
-  //return <span>{ props.label }</span>
+  return (
+    <span className={"todo-list-item"} style={style}>
+      {label}
+    </span>
+  );
 };
 
 export default TodoListItem;
