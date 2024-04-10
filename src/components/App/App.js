@@ -31,7 +31,6 @@ export default class App extends Component {
   deleteItem = (id) => {
     this.setState(({ todoData }) => {
       const idx = todoData.findIndex((element) => element.id === id);
-      // console.log(idx);
       const newArray = [...todoData.slice(0, idx), ...todoData.slice(idx + 1)];
       return {
         todoData: newArray,
@@ -43,7 +42,6 @@ export default class App extends Component {
     const newItem = this.createTodoItem(text);
 
     this.setState(({ todoData }) => {
-      // todoDate.push(newItem);
       const newArr = [...todoData, newItem];
       return {
         todoData: newArr,
